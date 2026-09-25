@@ -46,7 +46,7 @@ jobs:
       - name: Install tw CLI
         run: |
           set -euo pipefail
-          curl -fsSL https://github.com/seqeralabs/tower-cli/releases/latest/download/tw-linux-x86_64 -o tw
+          curl --proto '=https' --proto-redir '=https' -fsSL https://github.com/seqeralabs/tower-cli/releases/latest/download/tw-linux-x86_64 -o tw
           chmod +x tw
           sudo mv tw /usr/local/bin/tw
           tw --version
